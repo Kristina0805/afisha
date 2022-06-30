@@ -15,3 +15,6 @@ public class Movies {
     private String name;
     private String genre;
 }
+
+
+
