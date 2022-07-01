@@ -52,7 +52,81 @@ public class ManagerMoviesTest {
         Assertions.assertArrayEquals(expected, manager.findAll());
     }
 
+    @Test
+    void findAllTwoTest() {
+        ManagerMovies manager = new ManagerMovies(5);
+        Movies[] expected = {};
+        Assertions.assertArrayEquals(expected, manager.findAll());
+    }
+
+    @Test
+    void findAllThreeTest() {
+        ManagerMovies manager = new ManagerMovies();
+        manager.add(movie4);
+
+        Movies[] expected = {movie4};
+        Assertions.assertArrayEquals(expected, manager.findAll());
+    }
+    @Test
+    void findAllFourTest(){
+         ManagerMovies manager = new ManagerMovies(11);
+         manager.add(movie7);
+
+         Movies[] expected = {movie7};
+         Assertions.assertArrayEquals(expected, manager.findAll());
+
+    }
+     @Test
+    void FindAllFiveTest(){
+         ManagerMovies manager = new ManagerMovies();
+
+         manager.add(movie1);
+         manager.add(movie2);
+         manager.add(movie3);
+         manager.add(movie4);
+         manager.add(movie5);
+         manager.add(movie6);
+         manager.add(movie7);
+         manager.add(movie8);
+         manager.add(movie9);
+         manager.add(movie10);
+
+         Movies[] expected = {movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8, movie9, movie10};
+         Assertions.assertArrayEquals(expected, manager.findAll());
+     }
 
 
+    @Test
+    void findLastTest() {
+        ManagerMovies manager = new ManagerMovies();
+        manager.add(movie1);
+        manager.add(movie2);
+        manager.add(movie3);
+        manager.add(movie4);
+        manager.add(movie5);
+        manager.add(movie6);
+        manager.add(movie7);
+        manager.add(movie8);
+        manager.add(movie9);
 
+        Movies [] expected = {movie9,movie8, movie7, movie6, movie5, movie4, movie3, movie2, movie1};
+        Assertions.assertArrayEquals(expected, manager.findLast());
+    }
+
+    @Test
+    void findLastTwoTest() {
+        ManagerMovies manager = new ManagerMovies(5);
+        manager.add(movie1);
+        manager.add(movie2);
+        manager.add(movie3);
+        manager.add(movie4);
+        manager.add(movie5);
+        manager.add(movie6);
+        manager.add(movie7);
+        manager.add(movie8);
+        manager.add(movie9);
+
+        Movies [] expected = {movie9,movie8, movie7, movie6, movie5};
+        Assertions.assertArrayEquals(expected, manager.findLast());
+    }
 }

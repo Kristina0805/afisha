@@ -37,7 +37,7 @@ public class ManagerMovies {
 
     }
 
-    public Movies[] findAll(Movies movie6) {
+    public Movies[] findAll() {
         return getFilms();
     }
 
